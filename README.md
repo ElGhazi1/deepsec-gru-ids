@@ -22,6 +22,18 @@
 
 This project introduces **DeepSec-GRU-IDS**, a deep learning–based Intrusion Detection System (IDS) utilizing a Gated Recurrent Unit (GRU) network to detect network anomalies in real time. The pipeline covers data preprocessing, model training on Google Colab, and deployment via FastAPI alongside a logging and visualization stack.
 
+
+## Dataset
+
+Network traffic dataset used throughout the project is available from Google Drive:
+
+[Download NIDataset.csv](https://drive.google.com/uc?export=download&id=1WSw2s6ZRQnwrGDI4mg2ON5Zv8wiG0rX-)
+
+*Example of downloading in Colab or a local script:*
+
+```bash
+wget -O NIDataset.csv "https://drive.google.com/uc?export=download&id=1WSw2s6ZRQnwrGDI4mg2ON5Zv8wiG0rX-"
+
 ## Project Context
 
 - **Course:** Ingénierie Informatique, Cybersécurité et Confiance Numérique  
