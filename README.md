@@ -44,8 +44,23 @@ This project introduces **DeepSec-GRU-IDS**, a deep learning–based Intrusion D
 - Load dataset from CSV and drop irrelevant fields  
 - Remove constant columns and handle infinite/NaN values by median imputation  
 - Encode labels and protocols with `LabelEncoder`  
-- Drop highly correlated features (threshold 0.85)  
-- Scale features (`StandardScaler`) and create sequences of length 10
+- Drop highly correlated features (threshold 0.85)
+
+**Correlation Matrix Before Feature Selection:**
+
+![Correlation Matrix](ressources/screens/correlation-matrix.png)
+
+- Scale features (`StandardScaler`) and create sequences of length 10  
+
+**Example of Normalized Sequences:**
+
+![Normalized Sequence](ressources/screens/example-of-normalized-sequence.png)
+
+- Handle class imbalance via upsampling of minority class
+
+**Upsampling Class Distribution:**
+
+![Upsampling Anomaly Class](ressources/screens/upsumbling-anomaly-class.png)
 
 ### Model Training
 
@@ -54,9 +69,17 @@ This project introduces **DeepSec-GRU-IDS**, a deep learning–based Intrusion D
 - **First Epoch Metrics:** Validation accuracy ≈ 92.64 %, AUC ≈ 0.979  
 - Save artifacts: `gru_model.keras`, `scaler.pkl`, encoders, `features.json`
 
-**Google Colab Resources:**
+**Google Colab Resource Usage:**
 
 ![Colab Resources](ressources/screens/colab-gru-ressources.png)
+
+**ROC Curve for GRU Model:**
+
+![ROC Function](ressources/screens/roc-function.png)
+
+**Confusion Matrix on Test Set:**
+
+![Confusion Matrix](ressources/screens/confusion-matrix.png)
 
 ### API & Deployment
 
@@ -68,9 +91,7 @@ This project introduces **DeepSec-GRU-IDS**, a deep learning–based Intrusion D
 
 ![Prediction Terminal](ressources/screens/prediction-terminal.png)
 
-### Logging & Visualization
-
-- **Visualization:** Kibana dashboard for real-time log monitoring
+**Kibana Dashboard:**
 
 ![Kibana Dashboard](ressources/screens/dashboard-kibana.png)
 
